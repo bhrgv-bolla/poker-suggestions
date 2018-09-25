@@ -1,9 +1,6 @@
 import React from "react";
 
-const IconSets = {
-  FontAwesome: require("react-native-vector-icons/FontAwesome"),
-  Entypo: require("react-native-vector-icons/Entypo")
-};
+const IconSets = { Entypo: require("react-native-vector-icons/Entypo") };
 
 export default class Icon extends React.Component {
   setNativeProps(nativeProps) {

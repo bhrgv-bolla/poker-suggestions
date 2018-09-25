@@ -1,11 +1,6 @@
-import iconFontFontAwesome from "react-native-vector-icons/Fonts/FontAwesome.ttf";
 import iconFontEntypo from "react-native-vector-icons/Fonts/Entypo.ttf";
 
 const iconFontStyles = `
-@font-face {
-  src: url(${iconFontFontAwesome});
-  font-family: FontAwesome;
-}
 @font-face {
   src: url(${iconFontEntypo});
   font-family: Entypo;

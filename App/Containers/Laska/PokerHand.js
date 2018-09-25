@@ -13,6 +13,10 @@ import {
   ImageBackground
 } from "react-native";
 import Icon from "./_laska_/Icon";
+import BetterHands from "./BetterHands.js";
+import ConfidenceStats from "./ConfidenceStats.js";
+import SuitPicker from "./SuitPicker.js";
+import NumberPicker from "./NumberPicker.js";
 
 const styles = StyleSheet.create({
   se334471f: {
@@ -202,8 +206,8 @@ const styles = StyleSheet.create({
     width: `100%`
   }
 });
-class MyApp extends React.PureComponent {
-  static navigationOptions = { title: "My App" };
+class PokerHand extends React.PureComponent {
+  static navigationOptions = { title: "PokerHand" };
   constructor(props) {
     super(props);
 
@@ -284,10 +288,14 @@ class MyApp extends React.PureComponent {
             </View>
           </View>
           <View style={styles.s6966039f}>
-            <TouchableHighlight style={styles.s66f1cdbf} onPress={() => {}}>
+            <TouchableHighlight
+              disabled={true}
+              style={styles.s66f1cdbf}
+              onPress={() => {}}
+            >
               <Icon iconIdentifier={`Entypo/ccw`} style={styles.sb09818b2} />
             </TouchableHighlight>
-            <TouchableHighlight style={styles.s34dbc60a} onPress={() => {}}>
+            <TouchableHighlight onPress={() => {}} style={styles.s34dbc60a}>
               <Icon iconIdentifier={`Entypo/hand`} style={styles.scb16a78d} />
             </TouchableHighlight>
             <TouchableHighlight style={styles.s6941755c} onPress={() => {}}>
@@ -297,16 +305,20 @@ class MyApp extends React.PureComponent {
               />
             </TouchableHighlight>
           </View>
+          {false ? <BetterHands /> : null}
+          {false ? <ConfidenceStats /> : null}
+          {false ? <SuitPicker /> : null}
+          {false ? <NumberPicker /> : null}
         </ImageBackground>
       </Fragment>
     );
   }
 }
 
-MyApp.defaultProps = {};
+PokerHand.defaultProps = {};
 
-MyApp = withNavigationProp(MyApp);
+PokerHand = withNavigationProp(PokerHand);
 
-export default MyApp;
+export default PokerHand;
 
 export { styles };
